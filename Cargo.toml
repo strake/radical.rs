@@ -6,7 +6,7 @@ description = "Numeric utilities"
 keywords = ["numeric"]
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/strake/numer.rs"
-documentation = "http://rustdoc.strake.me.uk/numer/index.html"
+documentation = "https://docs.rs/numer/"
 
 [dependencies]
 typenum = "1.3"
