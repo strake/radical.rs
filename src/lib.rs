@@ -9,7 +9,7 @@ extern crate typenum;
 #[allow(unused)]
 use core::marker::PhantomData;
 use core::num::Float;
-use typenum::Unsigned;
+use typenum::{ NonZero, PInt, Unsigned };
 
 pub trait Radical<N: Unsigned> {
     type Root;
@@ -27,7 +27,7 @@ impl_Radical_float!(f32);
 impl_Radical_float!(f64);
 
 #[cfg(feature = "dimensioned")]
-impl<N: Unsigned, D: dim::Dimension + dim::Root<N>, A: Radical<N>> Radical<N> for dim::Dim<D, A> where D::Output: dim::Dimension {
-    type Root = dim::Dim<<D as dim::Root<N>>::Output, A::Root>;
+impl<N: Unsigned + NonZero, D: dim::Dimension + dim::Root<PInt<N>>, A: Radical<N>> Radical<N> for dim::Dim<D, A> where D::Output: dim::Dimension {
+    type Root = dim::Dim<<D as dim::Root<PInt<N>>>::Output, A::Root>;
     #[inline] fn root(self) -> Self::Root { dim::Dim(self.0.root(), PhantomData) }
 }
