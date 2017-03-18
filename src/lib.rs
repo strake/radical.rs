@@ -6,10 +6,8 @@
 extern crate dimensioned as dim;
 extern crate typenum;
 
-#[allow(unused)]
-use core::marker::PhantomData;
 use core::num::Float;
-use typenum::{ NonZero, PInt, Unsigned };
+use typenum::Unsigned;
 
 pub trait Radical<N: Unsigned> {
     type Root;
