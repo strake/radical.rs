@@ -1,12 +1,12 @@
 [package]
-name = "numer"
+name = "radical"
 version = "0.1.0"
 authors = ["M Farkas-Dyck <strake888@gmail.com>"]
-description = "Numeric utilities"
+description = "Radical trait"
 keywords = ["numeric"]
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/strake/numer.rs"
-documentation = "https://docs.rs/numer/"
+repository = "https://github.com/strake/radical.rs"
+documentation = "https://docs.rs/radical/"
 
 [dependencies]
 typenum = "1.3"
