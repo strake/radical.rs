@@ -13,6 +13,11 @@ pub trait Radical<N: Unsigned> {
     fn root(self) -> Self::Root;
 }
 
+impl<N: Unsigned> Radical<N> for () {
+    type Root = ();
+    fn root(self) {}
+}
+
 macro_rules! impl_Radical_float {
     ($T: ty) => (impl<N: Unsigned> Radical<N> for $T {
         type Root = $T;
