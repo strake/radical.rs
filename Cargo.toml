@@ -1,6 +1,6 @@
 [package]
 name = "radical"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["M Farkas-Dyck <strake888@gmail.com>"]
 description = "Radical trait"
 keywords = ["numeric"]
