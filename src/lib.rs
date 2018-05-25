@@ -1,12 +1,11 @@
-#![feature(core_float)]
-
 #![no_std]
 
 #[cfg(feature = "dimensioned")]
 extern crate dimensioned as dim;
+extern crate num_traits;
 extern crate typenum;
 
-use core::num::Float;
+use num_traits::float::FloatCore as Float;
 use typenum::Unsigned;
 
 pub trait Radical<N: Unsigned> {
